@@ -11,7 +11,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PrimeNumbers {
-    public static ArrayList identifyPrimeNumbers() {
+
+    public static void main (String[] args) {
+        System.out.println("--------1.3 - Prime numbers identifying--------");
+        System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.identifyPrimeNumbers());
+    }
+
+    private static ArrayList identifyPrimeNumbers() {
         ArrayList primeNumbersList = new ArrayList();
         for (int i = 2; i < 100; i++) {
             boolean isPrime = true;
