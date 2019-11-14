@@ -19,7 +19,7 @@ public class PrimeNumbers {
 
     private static ArrayList identifyPrimeNumbers() {
         ArrayList primeNumbersList = new ArrayList();
-        for (int i = 2; i < 100; i++) {
+        for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
             int divider = (int) Math.sqrt(i);
             for (int j = 2; j <= divider; j++) {
