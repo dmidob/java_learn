@@ -18,23 +18,21 @@ public class ArrayEditing {
     }
 
 
-    //This method removes element that should be removed AND THE NEXT ONE FOR SOME REASON. Investigating it.
-    private static int[] removeNumberFromArray(int[] inputArray, int numberToEdit){
+    private static int[] removeNumberFromArray(int[] inputArray, int numberForRemoval){
         int countOfNumbersToEditFromArray = 0;
         for (int value : inputArray) {
-            if (value == numberToEdit) {
+            if (value == numberForRemoval) {
                 countOfNumbersToEditFromArray++;
             }
         }
         int[] editedArray = new int[inputArray.length-countOfNumbersToEditFromArray];
         int indexForNewArray = 0;
 
-        for (int i = 0; i < inputArray.length; i++){
-            if (inputArray[i] != numberToEdit){
-                editedArray[indexForNewArray] = inputArray[i];
+        for (int value : inputArray) {
+            if (value != numberForRemoval) {
+                editedArray[indexForNewArray] = value;
                 indexForNewArray++;
             }
-            else {i++;}
         }
         return editedArray;
     }
