@@ -1,4 +1,4 @@
-/*
+package FirstSimpleJavaTasks;/*
 1.4. Удаление из массива
 
         Задача:
@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class ArrayEditing {
 
     public static void main (String[] args) {
-        //ArrayList<Integer> createdArrayForEditing =  MaxMinAverage.generateRandomArray(20);
+        //ArrayList<Integer> createdArrayForEditing =  FirstSimpleJavaTasks.MaxMinAverage.generateRandomArray(20);
         int[] createdArrayForEditing = {4, 5, 0, 5, 6, 0, 8, 3, 3, 0, 2, 6, 5, 4, 3, 0, 4, 6, 6, 9};
         System.out.println("Initial array: " + Arrays.toString(createdArrayForEditing));
         System.out.println("Updated array: " + Arrays.toString(removeNumberFromArray(createdArrayForEditing,4)));

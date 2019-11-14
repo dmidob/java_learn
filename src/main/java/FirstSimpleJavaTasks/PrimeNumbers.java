@@ -1,4 +1,4 @@
-/*
+package FirstSimpleJavaTasks;/*
 1.3. Поиск простых чисел
 
 Задача:
@@ -8,7 +8,6 @@
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class PrimeNumbers {
 

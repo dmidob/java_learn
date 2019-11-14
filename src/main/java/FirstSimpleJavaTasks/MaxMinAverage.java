@@ -1,4 +1,4 @@
-/*
+package FirstSimpleJavaTasks;/*
 1.1. Максимальное, минимальное и среднее значение
 Задача:
 Заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
@@ -23,7 +23,7 @@ public class MaxMinAverage {
     static ArrayList<Integer> generateRandomArray (int arrayLength) {
         ArrayList<Integer> newArray = new ArrayList<>();
            for (int i = 0; i < arrayLength; i++) {
-                newArray.add(i, (int) (Math.random() * 10));
+                newArray.add(i, (int) (Math.random() * 300));
             }
             return newArray;
     }
