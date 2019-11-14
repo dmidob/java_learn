@@ -7,54 +7,105 @@ package FirstSimpleJavaTasks;/*
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MaxMinAverage {
 
     public static void main (String[] args) {
         System.out.println("--------1.1 - Max, Min, Average values--------");
-        ArrayList<Integer> createdArray =  generateRandomArray(20);    //create array and fill it by 10 random
+        /*
+        List<Integer> createdArrayList =  ArrayGenerating.generateRandomArrayList(20);    //create array and fill it by 10 random
         // int numbers from 0 to 10
-        System.out.println("Max value of array " + createdArray + " is: " + MaxMinAverage.getMaxArrayValue(createdArray));
-        System.out.println("Min value of array " + createdArray + " is: " + MaxMinAverage.getMinArrayValue(createdArray));
-        System.out.println("Average value of array " + createdArray + " is: " + MaxMinAverage.getAverageArrayValue(createdArray));
+        System.out.println("Max value of array " + createdArrayList + " is: "
+                + MaxMinAverage.getMaxArrayListValue(createdArrayList));
+        System.out.println("Min value of array " + createdArrayList + " is: "
+                + MaxMinAverage.getMinArrayListValue(createdArrayList));
+        System.out.println("Average value of array " + createdArrayList + " is: "
+                + MaxMinAverage.getAverageArrayListValue(createdArrayList));
+*/
+
+        int[] createdIntArray =  ArrayGenerating.generateRandomIntArray(20);    //create array and fill it by 10 random
+        // int numbers from 0 to 10
+        System.out.println("Max value of array " + Arrays.toString(createdIntArray) + " is: "
+                + MaxMinAverage.getMaxIntArrayValue(createdIntArray));
+        System.out.println("Min value of array " + Arrays.toString(createdIntArray) + " is: "
+                + MaxMinAverage.getMinIntArrayValue(createdIntArray));
+        System.out.println("Average value of array " + Arrays.toString(createdIntArray) + " is: "
+                + MaxMinAverage.getAverageIntArrayValue(createdIntArray));
+
+
     }
 
-    //method for array generating and filling it by random int numbers from 0 to 10
-    static ArrayList<Integer> generateRandomArray (int arrayLength) {
-        ArrayList<Integer> newArray = new ArrayList<>();
-           for (int i = 0; i < arrayLength; i++) {
-                newArray.add(i, (int) (Math.random() * 300));
-            }
-            return newArray;
-    }
+
+
+
+
 
     //method for getting max value of input array
-    private static int getMaxArrayValue (ArrayList<Integer> inputArray) {
-         int maxArrayValue = inputArray.get(0);
-         for (Integer integer : inputArray) {
-             if (integer > maxArrayValue) {
-                 maxArrayValue = integer;
-             }
-         }
-         return maxArrayValue;
+    public static int getMaxArrayListValue (List<Integer> inputArray) {
+        int maxArrayListValue = inputArray.get(0);
+        for (Integer integer : inputArray) {
+            if (integer > maxArrayListValue) {
+                maxArrayListValue = integer;
+            }
+        }
+        return maxArrayListValue;
     }
+
+
+    static int getMaxIntArrayValue (int[] inputArray) {
+        int maxArrayIntValue = inputArray[0];
+        for (Integer integer : inputArray) {
+            if (integer > maxArrayIntValue) {
+                maxArrayIntValue = integer;
+            }
+        }
+        return maxArrayIntValue;
+    }
+
+
+
+
 
     //method for getting min value of input array
-    private static int getMinArrayValue (ArrayList<Integer> inputArray) {
-        int minArrayValue = inputArray.get(0);
+    private static int getMinArrayListValue (List<Integer> inputArray) {
+        int minArrayListValue = inputArray.get(0);
         for (Integer integer : inputArray) {
-            if (integer < minArrayValue)
-                minArrayValue = integer;
+            if (integer < minArrayListValue)
+                minArrayListValue = integer;
             }
-        return minArrayValue;
+        return minArrayListValue;
     }
 
-    //method for getting average value of input array
-    private static int getAverageArrayValue (ArrayList<Integer> inputArray) {
-        int averageArrayValue = 0;
-        for (Integer integer : inputArray)  {
-            averageArrayValue += integer;
+
+    private static int getMinIntArrayValue (int[] inputArray) {
+        int minArrayIntValue = inputArray[0];
+        for (Integer integer : inputArray) {
+            if (integer < minArrayIntValue) {
+                minArrayIntValue = integer;
+            }
         }
-        return averageArrayValue/inputArray.size();
+        return minArrayIntValue;
+    }
+
+
+
+
+    //method for getting average value of input array
+    private static int getAverageArrayListValue (List<Integer> inputArray) {
+        int averageArrayListValue = 0;
+        for (Integer integer : inputArray)  {
+            averageArrayListValue += integer;
+        }
+        return averageArrayListValue/inputArray.size();
+    }
+
+    private static int getAverageIntArrayValue (int[] inputArray) {
+        int averageIntArrayListValue = 0;
+        for (Integer integer : inputArray)  {
+            averageIntArrayListValue += integer;
+        }
+        return averageIntArrayListValue/inputArray.length;
     }
 }

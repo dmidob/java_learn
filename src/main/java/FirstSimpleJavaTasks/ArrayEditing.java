@@ -7,6 +7,7 @@ package FirstSimpleJavaTasks;/*
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ArrayEditing {
 
@@ -38,8 +39,8 @@ public class ArrayEditing {
     }
 
     //This method works perfect but uses stream
-    public static ArrayList<Integer> removeNumberFromArrayStream(int arrayLength, int numberToRemove) {
-        ArrayList<Integer> arrayForEditing = MaxMinAverage.generateRandomArray(arrayLength);
+    public static List<Integer> removeNumberFromArrayStream(int arrayLength, int numberToRemove) {
+        List<Integer> arrayForEditing = ArrayGenerating.generateRandomArrayList(arrayLength);
         System.out.println("Initial array: " + arrayForEditing.toString());
         arrayForEditing.removeIf(i -> (i == numberToRemove));
         System.out.println("Number to be removed from array is: " + numberToRemove);
