@@ -3,14 +3,15 @@
  */
 
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class BubbleSort {
 
     public static void main (String[] args) {
+
         System.out.println("--------1.2 - Bubble sorting algorithm--------");
-        ArrayList<Integer> createdArrayForSorting =  MaxMinAverage.generateRandomArray(20);
+        List<Integer> createdArrayForSorting =  MaxMinAverage.generateRandomArray(20);
         System.out.println("Initial array is " + createdArrayForSorting);
         System.out.println("Sorted array with SWAP method is " + BubbleSort.arrayBubbleSorting(createdArrayForSorting));
         System.out.println("Sorted array without SWAP and without extra variable " +
@@ -20,7 +21,23 @@ public class BubbleSort {
 
     }
 
-    private static ArrayList<Integer> arrayBubbleSorting(ArrayList<Integer> inputArray) {
+    //method that swaps 2 particular elements in input array without any extra variable
+    private static void swapTwoValuesNoExtraVariable (int firstIndexValue, int secondIndexValue, List<Integer> inputArray){
+        inputArray.set(firstIndexValue, inputArray.get(secondIndexValue) - inputArray.get(firstIndexValue));
+        inputArray.set(secondIndexValue, inputArray.get(secondIndexValue) - inputArray.get(firstIndexValue));
+        inputArray.set(secondIndexValue, inputArray.get(secondIndexValue) + inputArray.get(firstIndexValue));
+    }
+
+    //method that swaps 2 particular elements in input array without any extra variable
+    private static void swapTwoValuesWithExtraVariable (int firstIndexValue, int secondIndexValue, List<Integer> inputArray){
+        int tempValueForSwap = 0;
+        tempValueForSwap = inputArray.get(firstIndexValue);
+        inputArray.set(firstIndexValue, inputArray.get(secondIndexValue));
+        inputArray.set(secondIndexValue, tempValueForSwap);
+    }
+
+    //Method that sorts array with bubble algorithm using Collections.swap() method
+    private static List<Integer> arrayBubbleSorting(List<Integer> inputArray) {
          for (int i = 0; i < inputArray.size(); i++) {
             for (int j = i + 1; j < inputArray.size(); j++) {
                 if (inputArray.get(i) > inputArray.get(j)) {
@@ -31,27 +48,25 @@ public class BubbleSort {
         return inputArray;
     }
 
-    private static ArrayList<Integer> arrayBubbleSortingNoSwapNoExtraVariable(ArrayList<Integer> inputArray) {
+
+    //Method that sorts array with bubble algorithm using swapTwoValuesNoExtraVariable() method
+    private static List<Integer> arrayBubbleSortingNoSwapNoExtraVariable(List<Integer> inputArray) {
         for (int i = 0; i < inputArray.size(); i++) {
             for (int j = i + 1; j < inputArray.size(); j++) {
                 if (inputArray.get(i) > inputArray.get(j)) {
-                    inputArray.set(i, inputArray.get(j) - inputArray.get(i));
-                    inputArray.set(j, inputArray.get(j) - inputArray.get(i));
-                    inputArray.set(i, inputArray.get(j) + inputArray.get(i));
+                    swapTwoValuesNoExtraVariable(i,j, inputArray);
                 }
             }
         }
         return inputArray;
     }
 
-    private static ArrayList<Integer> arrayBubbleSortingNoSwap(ArrayList<Integer> inputArray) {
-        int tempValueForSwap = 0;
+    //Method that sorts array with bubble algorithm using swapTwoValuesWithExtraVariable() method
+    private static List<Integer> arrayBubbleSortingNoSwap(List<Integer> inputArray) {
         for (int i = 0; i < inputArray.size(); i++) {
             for (int j = i + 1; j < inputArray.size(); j++) {
                 if (inputArray.get(i) > inputArray.get(j)) {
-                    tempValueForSwap = inputArray.get(i);
-                    inputArray.set(i, inputArray.get(j));
-                    inputArray.set(j, tempValueForSwap);
+                    swapTwoValuesWithExtraVariable(i,j, inputArray);
                 }
             }
         }

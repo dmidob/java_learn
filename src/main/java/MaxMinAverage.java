@@ -32,20 +32,21 @@ public class MaxMinAverage {
     private static int getMaxArrayValue (ArrayList<Integer> inputArray) {
          int maxArrayValue = inputArray.get(0);
          for (Integer integer : inputArray) {
-             if (integer > maxArrayValue)
-             maxArrayValue = integer;
+             if (integer > maxArrayValue) {
+                 maxArrayValue = integer;
+             }
          }
          return maxArrayValue;
     }
 
     //method for getting min value of input array
     private static int getMinArrayValue (ArrayList<Integer> inputArray) {
-        int maxArrayValue = inputArray.get(0);
+        int minArrayValue = inputArray.get(0);
         for (Integer integer : inputArray) {
-            if (integer < maxArrayValue)
-                maxArrayValue = integer;
+            if (integer < minArrayValue)
+                minArrayValue = integer;
             }
-        return maxArrayValue;
+        return minArrayValue;
     }
 
     //method for getting average value of input array
@@ -56,5 +57,4 @@ public class MaxMinAverage {
         }
         return averageArrayValue/inputArray.size();
     }
-
 }
