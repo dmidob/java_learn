@@ -28,11 +28,18 @@ public class BubbleSort {
         inputArray.set(secondIndexValue, inputArray.get(secondIndexValue) + inputArray.get(firstIndexValue));
     }
 
-    //method that swaps 2 particular elements in input array without any extra variable
+    //method that swaps 2 particular elements in input List array with any extra variable
     private static void swapTwoValuesWithExtraVariable (int firstIndexValue, int secondIndexValue, List<Integer> inputArray){
         int tempValueForSwap = inputArray.get(firstIndexValue);
         inputArray.set(firstIndexValue, inputArray.get(secondIndexValue));
         inputArray.set(secondIndexValue, tempValueForSwap);
+    }
+
+    //method that swaps 2 particular elements in input List array with any extra variable
+    private static void swapTwoValuesWithExtraVariableIntArray (int firstIndexValue, int secondIndexValue, int[] inputArray){
+        int tempValueForSwap = inputArray[firstIndexValue];
+        inputArray[firstIndexValue] = inputArray[secondIndexValue];
+        inputArray[secondIndexValue] = tempValueForSwap;
     }
 
     //Method that sorts array with bubble algorithm using Collections.swap() method
@@ -70,5 +77,16 @@ public class BubbleSort {
             }
         }
         return inputArray;
+    }
+
+    static int[] arrayBubbleSortingIntArray (int[] inputIntArray) {
+        for (int i = 0; i < inputIntArray.length; i++) {
+            for (int j = i + 1; j < inputIntArray.length; j++) {
+                if (inputIntArray[i] > inputIntArray[j]) {
+                    swapTwoValuesWithExtraVariableIntArray(i,j, inputIntArray);
+                }
+            }
+        }
+        return inputIntArray;
     }
 }

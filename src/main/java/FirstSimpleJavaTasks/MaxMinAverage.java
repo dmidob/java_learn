@@ -79,7 +79,7 @@ public class MaxMinAverage {
     }
 
 
-    private static int getMinIntArrayValue (int[] inputArray) {
+    static int getMinIntArrayValue (int[] inputArray) {
         int minArrayIntValue = inputArray[0];
         for (Integer integer : inputArray) {
             if (integer < minArrayIntValue) {
@@ -101,7 +101,7 @@ public class MaxMinAverage {
         return averageArrayListValue/inputArray.size();
     }
 
-    private static int getAverageIntArrayValue (int[] inputArray) {
+    static int getAverageIntArrayValue (int[] inputArray) {
         int averageIntArrayListValue = 0;
         for (Integer integer : inputArray)  {
             averageIntArrayListValue += integer;
