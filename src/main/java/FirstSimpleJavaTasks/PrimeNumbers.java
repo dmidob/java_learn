@@ -13,10 +13,10 @@ public class PrimeNumbers {
 
     public static void main (String[] args) {
         System.out.println("--------1.3 - Prime numbers identifying--------");
-        System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.identifyPrimeNumbers());
+        System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.identifyPrimeNumbersArrayList());
     }
 
-    private static ArrayList identifyPrimeNumbers() {
+    static ArrayList identifyPrimeNumbersArrayList () {
         ArrayList primeNumbersList = new ArrayList();
         for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
@@ -33,6 +33,9 @@ public class PrimeNumbers {
         }
         return primeNumbersList;
     }
+
+
+
 }
 
 

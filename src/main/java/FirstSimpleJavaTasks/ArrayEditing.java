@@ -19,7 +19,7 @@ public class ArrayEditing {
     }
 
 
-    private static int[] removeNumberFromArray(int[] inputArray, int numberForRemoval){
+    static int[] removeNumberFromArray (int[] inputArray, int numberForRemoval){
         int countOfNumbersToEditFromArray = 0;
         for (int value : inputArray) {
             if (value == numberForRemoval) {
