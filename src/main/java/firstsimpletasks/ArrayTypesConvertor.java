@@ -1,11 +1,11 @@
-package firstSimpleJavaTasks;
+package firstsimpletasks;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayTypesConversion {
+public class ArrayTypesConvertor {
 
-    public static int[] arrayListToIntArrayConversion (List<Integer> inputArray){
+    static int[] arrayListToIntArrayConversion (List<Integer> inputArray){
         int[] convertedArray = new int[inputArray.size()];
         for (int i = 0; i < inputArray.size(); i++){
             convertedArray[i] = inputArray.get(i);

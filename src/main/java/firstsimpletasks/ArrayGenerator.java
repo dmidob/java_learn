@@ -1,9 +1,9 @@
-package firstSimpleJavaTasks;
+package firstsimpletasks;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayGenerating {
+class ArrayGenerator {
 
     //method for array generating and filling it by random int numbers from 0 to 300 using List array.
     static List<Integer> generateRandomArrayList (int arrayLength) {

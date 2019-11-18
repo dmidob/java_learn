@@ -1,4 +1,4 @@
-package firstSimpleJavaTasks;
+package firstsimpletasks;
 
 
 
@@ -11,13 +11,13 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class ArrayEditingTests {
+public class ArrayEditorTests {
 
     private int[] inputArray;
     private int[] editedArray;
     private int[] numberForRemoval;
 
-    public ArrayEditingTests (int[] inputArray, int[] editedArray, int[] numberForRemoval) {
+    public ArrayEditorTests (int[] inputArray, int[] editedArray, int[] numberForRemoval) {
         this.inputArray = inputArray;
         this.editedArray = editedArray;
         this.numberForRemoval = numberForRemoval;
@@ -34,6 +34,6 @@ public class ArrayEditingTests {
 
     @Test
     public void paramTest() {
-        Assert.assertArrayEquals(editedArray, ArrayEditing.removeNumberFromArray(inputArray,numberForRemoval[0]));
+        Assert.assertArrayEquals(editedArray, ArrayEditor.removeNumberFromArray(inputArray,numberForRemoval[0]));
     }
 }
