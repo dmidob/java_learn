@@ -1,4 +1,4 @@
-package FirstSimpleJavaTasks;/*
+package firstSimpleJavaTasks;/*
 1.2. Реализуйте алгоритм сортировки пузырьком для сортировки массива
  */
 

@@ -1,4 +1,4 @@
-package FirstSimpleJavaTasks;/*
+package firstSimpleJavaTasks;/*
 1.3. Поиск простых чисел
 
 Задача:

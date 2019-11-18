@@ -1,11 +1,10 @@
-package FirstSimpleJavaTasks;/*
+package firstSimpleJavaTasks;/*
 1.4. Удаление из массива
 
         Задача:
         Дан массив целых чисел и ещё одно целое число. Удалите все вхождения этого числа из массива (пропусков быть не должно).
 */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

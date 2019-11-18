@@ -1,4 +1,4 @@
-package FirstSimpleJavaTasks;/*
+package firstSimpleJavaTasks;/*
 1.1. Максимальное, минимальное и среднее значение
 Задача:
 Заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
@@ -6,7 +6,6 @@ package FirstSimpleJavaTasks;/*
 */
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
