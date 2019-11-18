@@ -1,4 +1,4 @@
-package firstSimpleJavaTasks;
+package firstsimpletasks;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package firstSimpleJavaTasks;/*
+package firstsimpletasks;/*
 1.4. Удаление из массива
 
         Задача:
@@ -8,7 +8,7 @@ package firstSimpleJavaTasks;/*
 import java.util.Arrays;
 import java.util.List;
 
-public class ArrayEditing {
+public class ArrayEditor {
 
     public static void main (String[] args) {
         //ArrayList<Integer> createdArrayForEditing =  FirstSimpleJavaTasks.MaxMinAverage.generateRandomArray(20);
@@ -39,7 +39,7 @@ public class ArrayEditing {
 
     //This method works perfect but uses stream
     public static List<Integer> removeNumberFromArrayStream(int arrayLength, int numberToRemove) {
-        List<Integer> arrayForEditing = ArrayGenerating.generateRandomArrayList(arrayLength);
+        List<Integer> arrayForEditing = ArrayGenerator.generateRandomArrayList(arrayLength);
         System.out.println("Initial array: " + arrayForEditing.toString());
         arrayForEditing.removeIf(i -> (i == numberToRemove));
         System.out.println("Number to be removed from array is: " + numberToRemove);

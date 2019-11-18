@@ -1,4 +1,4 @@
-package firstSimpleJavaTasks;/*
+package firstsimpletasks;/*
 1.2. Реализуйте алгоритм сортировки пузырьком для сортировки массива
  */
 
@@ -11,7 +11,7 @@ public class BubbleSort {
     public static void main (String[] args) {
 
         System.out.println("--------1.2 - Bubble sorting algorithm--------");
-        List<Integer> createdArrayForSorting =  ArrayGenerating.generateRandomArrayList(20);
+        List<Integer> createdArrayForSorting =  ArrayGenerator.generateRandomArrayList(20);
         System.out.println("Initial array is " + createdArrayForSorting);
         System.out.println("Sorted array with SWAP method is " + BubbleSort.arrayBubbleSorting(createdArrayForSorting));
         System.out.println("Sorted array without SWAP and without extra variable " +
