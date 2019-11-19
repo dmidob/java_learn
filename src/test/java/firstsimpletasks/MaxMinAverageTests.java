@@ -5,9 +5,9 @@ import org.junit.Test;
 
 public class MaxMinAverageTests {
 
-    private int[] arrayFrom0To9 = {0,1,2,3,4,5,6,7,8,9};
-    private int[] arrayZeroLength = {};
-    private int[] arrayWithNegativeValues = {-5,225,-1,0,25,-61};
+    private final int[] arrayFrom0To9 = {0,1,2,3,4,5,6,7,8,9};
+    private final int[] arrayZeroLength = {};
+    private final int[] arrayWithNegativeValues = {-5,225,-1,0,25,-61};
 
 
     @Test

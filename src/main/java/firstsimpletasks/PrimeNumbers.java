@@ -8,6 +8,7 @@ package firstsimpletasks;/*
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PrimeNumbers {
 
@@ -16,8 +17,8 @@ public class PrimeNumbers {
         System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.identifyPrimeNumbersArrayList());
     }
 
-    static ArrayList identifyPrimeNumbersArrayList () {
-        ArrayList primeNumbersList = new ArrayList();
+    static List<Integer> identifyPrimeNumbersArrayList () {
+        ArrayList<Integer> primeNumbersList = new ArrayList();
         for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
             int divider = (int) Math.sqrt(i);
