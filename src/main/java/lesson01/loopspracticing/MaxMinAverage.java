@@ -1,10 +1,9 @@
-package firstsimpletasks;/*
+package lesson01.loopspracticing;/*
 1.1. Максимальное, минимальное и среднее значение
 Задача:
 Заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
 Для генерации случайного числа используйте метод Math.random().
 */
-
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +23,7 @@ public class MaxMinAverage {
                 + MaxMinAverage.getAverageArrayListValue(createdArrayList));
 */
 
-        int[] createdIntArray =  ArrayGenerator.generateRandomIntArray(20);    //create array and fill it by 10 random
+        int[] createdIntArray =  lesson01.arraysmanipulation.ArrayGenerator.generateRandomIntArray(20);    //create array and fill it by 10 random
         // int numbers from 0 to 10
         System.out.println("Max value of array " + Arrays.toString(createdIntArray) + " is: "
                 + MaxMinAverage.getMaxIntArrayValue(createdIntArray));
@@ -32,14 +31,7 @@ public class MaxMinAverage {
                 + MaxMinAverage.getMinIntArrayValue(createdIntArray));
         System.out.println("Average value of array " + Arrays.toString(createdIntArray) + " is: "
                 + MaxMinAverage.getAverageIntArrayValue(createdIntArray));
-
-
     }
-
-
-
-
-
 
     //method for getting max value of input array
     public static int getMaxArrayListValue (List<Integer> inputArray) {
@@ -52,7 +44,6 @@ public class MaxMinAverage {
         return maxArrayListValue;
     }
 
-
     static int getMaxIntArrayValue (int[] inputArray) {
         int maxArrayIntValue = inputArray[0];
         for (Integer integer : inputArray) {
@@ -62,10 +53,6 @@ public class MaxMinAverage {
         }
         return maxArrayIntValue;
     }
-
-
-
-
 
     //method for getting min value of input array
     private static int getMinArrayListValue (List<Integer> inputArray) {
@@ -77,7 +64,6 @@ public class MaxMinAverage {
         return minArrayListValue;
     }
 
-
     static int getMinIntArrayValue (int[] inputArray) {
         int minArrayIntValue = inputArray[0];
         for (Integer integer : inputArray) {
@@ -87,9 +73,6 @@ public class MaxMinAverage {
         }
         return minArrayIntValue;
     }
-
-
-
 
     //method for getting average value of input array
     private static int getAverageArrayListValue (List<Integer> inputArray) {

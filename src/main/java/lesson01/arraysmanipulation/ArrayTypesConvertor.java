@@ -1,4 +1,4 @@
-package firstsimpletasks;
+package lesson01.arraysmanipulation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +20,4 @@ public class ArrayTypesConvertor {
         }
         return convertedArray;
     }
-
 }

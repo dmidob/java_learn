@@ -1,7 +1,7 @@
-package firstsimpletasks;
+package lesson01.loopspracticing;
 
 import org.junit.Test;
-
+import static lesson01.loopspracticing.BubbleSort.arrayBubbleSortingIntArray;
 import static org.junit.Assert.assertArrayEquals;
 
 public class BubbleSortTests {
@@ -11,15 +11,13 @@ public class BubbleSortTests {
     private final int[] newIntSingleElementArray = {0};
     private final int[] newIntSingleElementArraySorted = {0};
 
-
     @Test
     public void testSimpleSorting() {
-        assertArrayEquals(newIntArraySorted, BubbleSort.arrayBubbleSortingIntArray(newIntArray));
+        assertArrayEquals(newIntArraySorted, arrayBubbleSortingIntArray(newIntArray));
     }
 
     @Test
     public void testSingleElementArraySorting() {
-        assertArrayEquals(newIntSingleElementArraySorted, BubbleSort.arrayBubbleSortingIntArray(newIntSingleElementArray));
+        assertArrayEquals(newIntSingleElementArraySorted, arrayBubbleSortingIntArray(newIntSingleElementArray));
     }
-
 }

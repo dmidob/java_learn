@@ -1,7 +1,7 @@
-package firstsimpletasks;/*
+package lesson01.loopspracticing;
+/*
 1.2. Реализуйте алгоритм сортировки пузырьком для сортировки массива
  */
-
 
 import java.util.Collections;
 import java.util.List;
@@ -11,14 +11,13 @@ public class BubbleSort {
     public static void main (String[] args) {
 
         System.out.println("--------1.2 - Bubble sorting algorithm--------");
-        List<Integer> createdArrayForSorting =  ArrayGenerator.generateRandomArrayList(20);
+        List<Integer> createdArrayForSorting =  lesson01.arraysmanipulation.ArrayGenerator.generateRandomArrayList(20);
         System.out.println("Initial array is " + createdArrayForSorting);
         System.out.println("Sorted array with SWAP method is " + BubbleSort.arrayBubbleSorting(createdArrayForSorting));
         System.out.println("Sorted array without SWAP and without extra variable " +
                 BubbleSort.arrayBubbleSortingNoSwapNoExtraVariable(createdArrayForSorting));
         System.out.println("Sorted array without SWAP with extra variable " +
                 BubbleSort.arrayBubbleSortingNoSwap(createdArrayForSorting));
-
     }
 
     //method that swaps 2 particular elements in input array without any extra variable

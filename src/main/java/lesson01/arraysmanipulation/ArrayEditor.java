@@ -1,4 +1,5 @@
-package firstsimpletasks;/*
+package lesson01.arraysmanipulation;
+/*
 1.4. Удаление из массива
 
         Задача:
@@ -12,11 +13,10 @@ public class ArrayEditor {
 
     public static void main (String[] args) {
         //ArrayList<Integer> createdArrayForEditing =  FirstSimpleJavaTasks.MaxMinAverage.generateRandomArray(20);
-        int[] createdArrayForEditing = {4, 5, 0, 5, 6, 0, 8, 3, 3, 0, 2, 6, 5, 4, 3, 0, 4, 6, 6, 9};
-        System.out.println("Initial array: " + Arrays.toString(createdArrayForEditing));
-        System.out.println("Updated array: " + Arrays.toString(removeNumberFromArray(createdArrayForEditing,4)));
+        int[] createdArrayForEdit = {4, 5, 0, 5, 6, 0, 8, 3, 3, 0, 2, 6, 5, 4, 3, 0, 4, 6, 6, 9};
+        System.out.println("Initial array: " + Arrays.toString(createdArrayForEdit));
+        System.out.println("Updated array: " + Arrays.toString(removeNumberFromArray(createdArrayForEdit,4)));
     }
-
 
     static int[] removeNumberFromArray (int[] inputArray, int numberForRemoval){
         int countOfNumbersToEditFromArray = 0;
@@ -46,8 +46,4 @@ public class ArrayEditor {
         System.out.println("Updated array: " + arrayForEditing.toString());
         return arrayForEditing;
     }
-
-
-
-
 }
