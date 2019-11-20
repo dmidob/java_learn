@@ -13,7 +13,7 @@ public class ArrayTypesConvertor {
         return convertedArray;
     }
 
-    public static List<Integer> intArrayToListArrayConversion (int[] inputArray){
+    public static List<Integer> intArrayToArrayListConversion (int[] inputArray){
         List<Integer> convertedArray = new ArrayList<>();
         for (int i = 0; i < inputArray.length; i++){
             convertedArray.add(i, inputArray[i]);
