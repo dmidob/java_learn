@@ -1,11 +1,11 @@
-package firstsimpletasks;/*
+package lesson01.loopspracticing;
+/*
 1.3. Поиск простых чисел
 
 Задача:
 Напишите программу, которая выводит на консоль простые числа в промежутке от [2, 100].
 Используйте для решения этой задачи оператор "%" (остаток от деления) и циклы.
  */
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +34,6 @@ public class PrimeNumbers {
         }
         return primeNumbersList;
     }
-
-
-
 }
 
 

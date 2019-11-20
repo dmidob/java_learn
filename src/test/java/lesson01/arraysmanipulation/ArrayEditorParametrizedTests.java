@@ -1,5 +1,6 @@
-package firstsimpletasks;
+package lesson01.arraysmanipulation;
 
+import lesson01.arraysmanipulation.ArrayEditor;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +19,7 @@ public class ArrayEditorParametrizedTests {
         this.numberForRemoval = numberForRemoval;
     }
 
-    @Parameterized.Parameters(name = "{index}:")
+    @Parameterized.Parameters(name = "{index}:{0}")
     public static Object[][] dataForTest () {
         return new Object[][] {
                 { new int[] {1,2,3,5,5}, new int[] {1,2,3} , 5},
