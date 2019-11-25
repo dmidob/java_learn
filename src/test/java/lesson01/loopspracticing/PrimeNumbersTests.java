@@ -12,7 +12,7 @@ public class PrimeNumbersTests {
 
     @Test
     public void testSimpleSorting() {
-        List<Integer> primeNumbersFrom2To100ArrayActual = PrimeNumbers.identifyPrimeNumbersArrayList();
+        List<Integer> primeNumbersFrom2To100ArrayActual = PrimeNumbers.generatePrimeNumbersArrayList();
         Assert.assertEquals(primeNumbersFrom2To100ArrayExpected , primeNumbersFrom2To100ArrayActual);
     }
 }
