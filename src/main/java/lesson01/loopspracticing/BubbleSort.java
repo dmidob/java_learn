@@ -78,7 +78,7 @@ public class BubbleSort {
         return inputArray;
     }
 
-    static int[] arrayBubbleSortingIntArray (int[] inputIntArray) {
+    int[] arrayBubbleSortingIntArray (int[] inputIntArray) {
         for (int i = 0; i < inputIntArray.length; i++) {
             for (int j = i + 1; j < inputIntArray.length; j++) {
                 if (inputIntArray[i] > inputIntArray[j]) {

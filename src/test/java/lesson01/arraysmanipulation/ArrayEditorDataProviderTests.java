@@ -21,7 +21,7 @@ public class ArrayEditorDataProviderTests {
 
     @Test
     @UseDataProvider("numbersRemovingFromArrayTest")
-    public void numbersTest(int[] inputArray, int[] resultedArray, int numberForRemoval) {
+    public void removeNumberFromArrayTest(int[] inputArray, int[] resultedArray, int numberForRemoval) {
         int[] editedArray = ArrayEditor.removeNumberFromArray(inputArray,numberForRemoval);
         Assert.assertArrayEquals(resultedArray, editedArray);
     }
