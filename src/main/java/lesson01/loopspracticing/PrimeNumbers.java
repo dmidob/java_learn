@@ -1,4 +1,5 @@
-package FirstSimpleJavaTasks;/*
+package lesson01.loopspracticing;
+/*
 1.3. Поиск простых чисел
 
 Задача:
@@ -6,18 +7,18 @@ package FirstSimpleJavaTasks;/*
 Используйте для решения этой задачи оператор "%" (остаток от деления) и циклы.
  */
 
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class PrimeNumbers {
 
     public static void main (String[] args) {
         System.out.println("--------1.3 - Prime numbers identifying--------");
-        System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.identifyPrimeNumbersArrayList());
+        System.out.println("List of prime numbers from 2 to 100 is " + PrimeNumbers.generatePrimeNumbersArrayList());
     }
 
-    static ArrayList identifyPrimeNumbersArrayList () {
-        ArrayList primeNumbersList = new ArrayList();
+    static List<Integer> generatePrimeNumbersArrayList () {
+        ArrayList<Integer> primeNumbersList = new ArrayList();
         for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
             int divider = (int) Math.sqrt(i);
@@ -33,9 +34,6 @@ public class PrimeNumbers {
         }
         return primeNumbersList;
     }
-
-
-
 }
 
 
