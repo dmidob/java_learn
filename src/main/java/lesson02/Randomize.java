@@ -11,8 +11,4 @@ public class Randomize {
         Random randomNumberInRange = new Random();
         return randomNumberInRange.nextInt((rightRangeBound - leftRangeBound) + 1) + leftRangeBound;
     }
-
-    public static void main (String[] args) {
-        System.out.println(generateRandomNumberInRange(10,20));
-    }
 }
