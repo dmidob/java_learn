@@ -1,7 +1,11 @@
 package lesson02;
-
 /*
+Task 3 (CharsCounter)
 Посчитать, сколько раз символ ch встречается в строке s.
+Ограничения: нет.
+int countChars(String s, char ch)
+Входные аргументы: String s, char ch
+Тип результата: int
  */
 
 public class CharsCounter {

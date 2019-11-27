@@ -8,8 +8,6 @@ void printRange(int first, int last)
 Тип результата - Вывод в консоль
  */
 
-import java.util.Scanner;
-
 public class RangePrinter {
 
     public static void main (String[] args)  {
