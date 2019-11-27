@@ -7,8 +7,7 @@ public class ConsoleInput {
         Scanner scanner = new Scanner(System.in);
         System.out.print(textMessageForInput);
         if (!scanner.hasNextInt()) {
-            System.out.println("Someone has input not an integer number...");
-            System.exit(-1);
+            throw new IllegalArgumentException("Someone has input not an integer number...");
         }
         return scanner.nextInt();
     }

@@ -11,8 +11,12 @@ void printRange(int first, int last)
 public class RangePrinter {
 
     public static void main (String[] args)  {
-        printRange(ConsoleInput.inputNumberFromConsole("Please input first number: "),
-                ConsoleInput.inputNumberFromConsole("Please input last number: "));
+        try {
+            printRange(ConsoleInput.inputNumberFromConsole("Please input first number: "),
+                    ConsoleInput.inputNumberFromConsole("Please input last number: "));;
+        } catch (Exception e) {
+            System.exit(-1);
+        }
     }
 
 
