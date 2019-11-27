@@ -10,8 +10,12 @@ boolean isPrime(int n)
  */
 public class PrimeChecker {
     public static void main (String[] args) {
-        System.out.println(isPrimeNumberChecking(ConsoleInput.inputNumberFromConsole("Please input " +
-                "integer number that greater than 0: ")));
+        if (isPrimeNumberChecking(ConsoleInput.inputNumberFromConsole("Please input " +
+                "integer number that greater than 0: "))){
+            System.out.println("prime");
+        } else {
+            System.out.println("not prime");
+        }
     }
 
     private static boolean isPrimeNumberChecking (int n){
