@@ -18,7 +18,7 @@ public class PrimeNumbers {
     }
 
     static List<Integer> generatePrimeNumbersArrayList () {
-        ArrayList<Integer> primeNumbersList = new ArrayList();
+        List<Integer> primeNumbersList = new ArrayList();
         for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
             int divider = (int) Math.sqrt(i);
