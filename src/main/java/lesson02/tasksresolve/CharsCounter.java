@@ -1,4 +1,4 @@
-package lesson02;
+package lesson02.tasksresolve;
 /*
 Task 3 (CharsCounter)
 Посчитать, сколько раз символ ch встречается в строке s.
@@ -35,6 +35,8 @@ public class CharsCounter {
                 countOfCharToFind++;
             }
         }
+
+        //вынести в отдельный метод
         if (countOfCharToFind == 0) {
             System.out.println("There is no any '"+ charToFind + "' char in '" + inputString + "' string");
         } else {

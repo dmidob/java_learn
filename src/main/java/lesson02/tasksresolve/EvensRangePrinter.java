@@ -1,4 +1,4 @@
-package lesson02;
+package lesson02.tasksresolve;
 /*
 https://docs.google.com/document/d/1WHxKj738p9XRGQbF1huwgnaavW1QgBZjkf0u_SmrkIg/edit
 Task 2 (EvensRangePrinter)
@@ -9,17 +9,24 @@ void printEvensRange(int first, int last)
 Тип результата Вывод в консоль
  */
 
+import lesson02.utility.ConsoleInput;
+
 public class EvensRangePrinter {
 
     public static void main (String[] args)  {
-        printEvensRange(ConsoleInput.inputNumberFromConsole("Please input first number: "),
-                ConsoleInput.inputNumberFromConsole("Please input last number: "));
+        printEvensRange(
+                ConsoleInput.inputNumberFromConsole("Please input first number: "),
+                ConsoleInput.inputNumberFromConsole("Please input last number: ")
+        );
     }
 
     private static void printEvensRange (int firstNumber, int lastNumber){
         if (firstNumber < lastNumber){
+//            someMethod();
+//        }
             for (int i = firstNumber; i <= lastNumber; i++) {
                 if (i % 2 == 0) {
+//                    isEven();
                     System.out.print(i + " ");
                 }
             }

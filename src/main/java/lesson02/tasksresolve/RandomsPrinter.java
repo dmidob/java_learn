@@ -1,4 +1,4 @@
-package lesson02;
+package lesson02.tasksresolve;
 /*
 Task 6 (RandomsPrinter)
 Напечатать в консоль count псевдослучайных чисел в диапазоне от min до max включительно. Можно использовать класс
@@ -8,6 +8,8 @@ void printRandoms(int count, int min, int max)
 Входные аргументы: int count, int min, int max
 Тип результата: boolean
  */
+
+import lesson02.utility.Randomize;
 
 public class RandomsPrinter {
     public static  void main (String[] args) {

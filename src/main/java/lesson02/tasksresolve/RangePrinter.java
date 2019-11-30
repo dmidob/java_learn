@@ -1,4 +1,4 @@
-package lesson02;
+package lesson02.tasksresolve;
 /*
 Task 1 (RangePrinter)
 Вывести на экран целые числа от first до last.
@@ -7,6 +7,8 @@ void printRange(int first, int last)
 Входные аргументы - int first, int last
 Тип результата - Вывод в консоль
  */
+
+import lesson02.utility.ConsoleInput;
 
 public class RangePrinter {
 

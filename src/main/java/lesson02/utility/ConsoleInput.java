@@ -1,9 +1,9 @@
-package lesson02;
+package lesson02.utility;
 
 import java.util.Scanner;
 
 public class ConsoleInput {
-    static int inputNumberFromConsole (String textMessageForInput) {
+    public static int inputNumberFromConsole (String textMessageForInput) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(textMessageForInput);
         if (!scanner.hasNextInt()) {

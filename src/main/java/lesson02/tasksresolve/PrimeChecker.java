@@ -1,4 +1,7 @@
-package lesson02;
+package lesson02.tasksresolve;
+
+import lesson02.utility.ConsoleInput;
+
 /*
 Task 5 (PrimeChecker)
 Определить, является ли число простым. Простое число - это натуральное число (больше нуля), которое делится нацело

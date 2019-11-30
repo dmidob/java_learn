@@ -1,10 +1,10 @@
-package lesson02;
+package lesson02.utility;
 
 import java.util.Random;
 
 public class Randomize {
 
-    static int generateRandomNumberInRange(int leftRangeBound, int rightRangeBound){
+    public static int generateRandomNumberInRange (int leftRangeBound, int rightRangeBound){
         if (leftRangeBound >= rightRangeBound) {
             throw new IllegalArgumentException("Right range bound must be greater than left range bound");
         }
