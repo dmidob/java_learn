@@ -1,4 +1,7 @@
 package lesson02.utility;
+/*
+Utility class for input capture from console
+ */
 
 import java.util.Scanner;
 
@@ -12,7 +15,7 @@ public class ConsoleInput {
         return scanner.nextInt();
     }
 
-    static String inputStringFromConsole (String textMessageForInput) {
+    public static String inputStringFromConsole (String textMessageForInput) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(textMessageForInput);
         return scanner.next();

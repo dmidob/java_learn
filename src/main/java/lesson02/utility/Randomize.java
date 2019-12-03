@@ -1,4 +1,7 @@
 package lesson02.utility;
+/*
+Utility class for generating random data
+ */
 
 import java.util.Random;
 
