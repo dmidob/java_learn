@@ -12,24 +12,35 @@ void printEvensRange(int first, int last)
 import lesson02.utility.ConsoleInput;
 
 public class EvensRangePrinter {
+    private static final String MESSAGE_FOR_FIRST_NUMBER_INPUT = "Please input first number: ";
+    private static final String MESSAGE_FOR_LAST_NUMBER_INPUT = "Please input last number: ";
 
     public static void main (String[] args)  {
         printEvensRange(
-                ConsoleInput.inputNumberFromConsole("Please input first number: "),
-                ConsoleInput.inputNumberFromConsole("Please input last number: ")
+                ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_FIRST_NUMBER_INPUT),
+                ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_LAST_NUMBER_INPUT)
         );
     }
 
     private static void printEvensRange (int firstNumber, int lastNumber){
-        if (firstNumber < lastNumber){
-//            someMethod();
-//        }
+        if (isInputEligible(firstNumber, lastNumber)){
             for (int i = firstNumber; i <= lastNumber; i++) {
-                if (i % 2 == 0) {
-//                    isEven();
-                    System.out.print(i + " ");
-                }
+                printEvenNumber(i);
             }
+        }
+    }
+
+    private static boolean isInputEligible(int num1, int num2){
+        boolean isEligible = false;
+        if (num1 < num2){
+            isEligible = true;
+        }
+        return isEligible;
+    }
+
+    private static void printEvenNumber(int numberToPrint) {
+        if (numberToPrint % 2 == 0) {
+            System.out.print(numberToPrint + " ");
         }
     }
 }
