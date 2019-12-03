@@ -10,22 +10,23 @@ boolean isPalindrome(String s)
 */
 
 public class PalindromeChecker {
+    private static final String STRING_FOR_PALINDROM_CHECK = "123454321";
     public static void main (String[] args) {
-        System.out.println(isPalindrome("12345 6 7 6 54321"));
+        System.out.println(isPalindrome(STRING_FOR_PALINDROM_CHECK));
     }
 
     private static boolean isPalindrome (String inputString){
-        boolean isPalindrome = false; //TODO to rename (isNotPalindrome)
+        boolean isNotPalindrome = true;
         int i = 0;
         while (i < inputString.length()) {
             if (inputString.charAt(i) == inputString.charAt(inputString.length() - i - 1)){
-                isPalindrome = true;
+                isNotPalindrome = false;
                 i++;
             }else {
-                isPalindrome = false;
+                isNotPalindrome = true;
                 break;
             }
         }
-        return isPalindrome;
+        return !isNotPalindrome;
     }
 }
