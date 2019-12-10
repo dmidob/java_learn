@@ -10,9 +10,9 @@ boolean isPalindrome(String s)
 */
 
 public class PalindromeChecker {
-    private static final String STRING_FOR_PALINDROM_CHECK = "123454321";
+    private static final String STRING_FOR_PALINDROME_CHECK = "123454321";
     public static void main (String[] args) {
-        System.out.println(isPalindrome(STRING_FOR_PALINDROM_CHECK));
+        System.out.println(isPalindrome(STRING_FOR_PALINDROME_CHECK));
     }
 
     private static boolean isPalindrome (String inputString){

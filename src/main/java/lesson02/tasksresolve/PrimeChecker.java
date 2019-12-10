@@ -13,8 +13,8 @@ boolean isPrime(int n)
  */
 public class PrimeChecker {
     private static final String MESSAGE_FOR_NUMBER_INPUT = "Please input integer number that greater than 0: ";
-    private static final String MESSAGE_FOR_IS_A_PRIME = "Inputed number is prime";
-    private static final String MESSAGE_FOR_IS_NOT_A_PRIME = "Inputed number is not a prime";
+    private static final String MESSAGE_FOR_IS_A_PRIME = "Input number is prime";
+    private static final String MESSAGE_FOR_IS_NOT_A_PRIME = "Input number is not a prime";
     private static final String MESSAGE_FOR_NUMBER_IS_LESS_THAN_ZERO = "Number should be > 0";
 
     public static void main (String[] args) {

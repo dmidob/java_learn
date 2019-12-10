@@ -11,11 +11,15 @@ void printRange(int first, int last)
 import lesson02.utility.ConsoleInput;
 
 public class RangePrinter {
+    private static final String MESSAGE_FOR_FIRST_NUMBER_INPUT = "Please input first number: ";
+    private static final String MESSAGE_FOR_LAST_NUMBER_INPUT = "Please input last number: ";
 
     public static void main (String[] args)  {
         try {
-            printRange(ConsoleInput.inputNumberFromConsole("Please input first number: "),
-                    ConsoleInput.inputNumberFromConsole("Please input last number: "));;
+            printRange(
+                    ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_FIRST_NUMBER_INPUT),
+                    ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_LAST_NUMBER_INPUT)
+            );
         } catch (Exception e) {
             System.exit(-1);
         }
