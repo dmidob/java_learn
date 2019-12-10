@@ -18,7 +18,7 @@ public class PrimeChecker {
     private static final String MESSAGE_FOR_NUMBER_IS_LESS_THAN_ZERO = "Number should be > 0";
 
     public static void main (String[] args) {
-        if (isPrimeNumberChecking(ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_NUMBER_INPUT))){
+        if (isPrime(ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_NUMBER_INPUT))){
             System.out.println(MESSAGE_FOR_IS_A_PRIME);
         } else {
             System.out.println(MESSAGE_FOR_IS_NOT_A_PRIME);
@@ -33,7 +33,7 @@ public class PrimeChecker {
         return isNumberPositive;
     }
 
-    private static boolean isPrimeNumberChecking (int numberForPrimeChecking){
+    private static boolean isPrime (int numberForPrimeChecking){
         boolean isPrime = true;
         if (!isNumberGreaterThanZero(numberForPrimeChecking)){
             System.out.println(MESSAGE_FOR_NUMBER_IS_LESS_THAN_ZERO);
