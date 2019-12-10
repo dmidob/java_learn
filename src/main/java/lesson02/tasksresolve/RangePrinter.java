@@ -28,8 +28,7 @@ public class RangePrinter {
             for (int i = firstNumber; i <= lastNumber ; i++) {
                 System.out.print(i + " ");
             }
-        }
-        else {
+        } else {
             for (int i = firstNumber; i >= lastNumber ; i--) {
                 System.out.print(i + " ");
             }
