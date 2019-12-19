@@ -33,7 +33,7 @@ public class PrimeChecker {
         }
     }
 
-    private static boolean isPrime (int numberForPrimeChecking){
+    static boolean isPrime (int numberForPrimeChecking){
         checkForNegativeInput(numberForPrimeChecking);
         if (numberForPrimeChecking == 1){
             return false;

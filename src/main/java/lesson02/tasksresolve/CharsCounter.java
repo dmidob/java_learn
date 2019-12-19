@@ -14,7 +14,7 @@ public class CharsCounter {
         countChars("Some text for test", 'S');
     }
 
-    private static int countChars (String inputString, char charToFind){
+    public static int countChars (String inputString, char charToFind){
         int countOfCharToFind = 0;
         for (int i = 0; i < inputString.length(); i++) {
             if (inputString.charAt(i) == charToFind){

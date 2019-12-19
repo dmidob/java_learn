@@ -15,7 +15,7 @@ public class PalindromeChecker {
         System.out.println(isPalindrome(STRING_FOR_PALINDROME_CHECK));
     }
 
-    private static boolean isPalindrome (String inputString){
+    static boolean isPalindrome (String inputString){
         int i = 0;
         while (i < inputString.length()) {
             if (inputString.charAt(i) != inputString.charAt(inputString.length() - i - 1)){
