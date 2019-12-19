@@ -21,11 +21,10 @@ public class RangePrinter {
                     ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_LAST_NUMBER_INPUT)
             );
         } catch (Exception e) {
+            e.printStackTrace();
             System.exit(-1);
         }
     }
-
-
 
     private static void printRange (int firstNumber, int lastNumber){
         if (firstNumber <= lastNumber) {

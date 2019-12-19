@@ -20,7 +20,7 @@ public class RandomsPrinter {
         boolean isError = false;
         if (countOfRandomNumbers > 0 & minNumber <= maxNumber){
             while (countOfRandomNumbers > 0 ){
-                System.out.println(Randomize.generateRandomNumberInRange(10, 20));
+                System.out.println(Randomize.generateRandomNumberInRange(minNumber, maxNumber));
                 countOfRandomNumbers--;
             }
         }else {

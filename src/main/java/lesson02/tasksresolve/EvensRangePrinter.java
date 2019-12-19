@@ -31,11 +31,7 @@ public class EvensRangePrinter {
     }
 
     private static boolean isInputEligible(int num1, int num2){
-        boolean isEligible = false;
-        if (num1 < num2){
-            isEligible = true;
-        }
-        return isEligible;
+        return num1 < num2;
     }
 
     private static void printEvenNumber(int numberToPrint) {

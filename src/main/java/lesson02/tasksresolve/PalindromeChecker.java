@@ -16,15 +16,13 @@ public class PalindromeChecker {
     }
 
     private static boolean isPalindrome (String inputString){
-        boolean isPalindrome = true;
         int i = 0;
         while (i < inputString.length()) {
             if (inputString.charAt(i) != inputString.charAt(inputString.length() - i - 1)){
-                isPalindrome = false;
-                break;
+                return false;
             }
             i++;
         }
-        return isPalindrome;
+        return true;
     }
 }
