@@ -3,7 +3,7 @@ package lesson01.arraysmanipulation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayTypesConvertor {
+public class ArrayTypesConverter {
 
     static int[] arrayListToIntArrayConversion (List<Integer> inputArray){
         int[] convertedArray = new int[inputArray.size()];
