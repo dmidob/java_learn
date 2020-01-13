@@ -9,7 +9,7 @@ void printRandoms(int count, int min, int max)
 Тип результата: boolean
  */
 
-import lesson02.utility.Randomize;
+import utils.numbersmanipulation.Randomize;
 
 public class RandomsPrinter {
     public static  void main (String[] args) {
@@ -18,7 +18,7 @@ public class RandomsPrinter {
 
     static boolean printRandomNumbers (int countOfRandomNumbers, int minNumber, int maxNumber){
         boolean isError = false;
-        if (countOfRandomNumbers > 0 & minNumber <= maxNumber){
+        if (countOfRandomNumbers > 0 && minNumber <= maxNumber){
             while (countOfRandomNumbers > 0 ){
                 System.out.println(Randomize.generateRandomNumberInRange(minNumber, maxNumber));
                 countOfRandomNumbers--;

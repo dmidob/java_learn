@@ -1,4 +1,4 @@
-package lesson02.utility;
+package utils.consolemanipulations;
 /*
 Utility class for input capture from console
  */

@@ -1,4 +1,4 @@
-package lesson01.arraysmanipulation;
+package utils.arraysmanipulation;
 /*
 1.4. Удаление из массива
 

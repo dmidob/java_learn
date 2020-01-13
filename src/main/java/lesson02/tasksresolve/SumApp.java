@@ -9,7 +9,7 @@ int clientElemsSum()
 Тип результата int
  */
 
-import lesson02.utility.ConsoleInput;
+import utils.consolemanipulations.ConsoleInput;
 
 public class SumApp {
     private static final String MESSAGE_FOR_INPUT = "Please input integer number: ";

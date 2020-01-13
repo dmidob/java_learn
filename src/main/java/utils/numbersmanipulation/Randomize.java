@@ -1,4 +1,4 @@
-package lesson02.utility;
+package utils.numbersmanipulation;
 /*
 Utility class for generating random data
  */

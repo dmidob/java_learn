@@ -1,4 +1,4 @@
-package lesson01.arraysmanipulation;
+package utils.arraysmanipulation;
 
 import java.util.ArrayList;
 import java.util.List;

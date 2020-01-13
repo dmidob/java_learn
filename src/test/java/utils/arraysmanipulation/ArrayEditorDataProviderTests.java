@@ -1,4 +1,4 @@
-package lesson01.arraysmanipulation;
+package utils.arraysmanipulation;
 
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;

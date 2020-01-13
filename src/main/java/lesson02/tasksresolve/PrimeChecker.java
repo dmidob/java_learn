@@ -1,6 +1,6 @@
 package lesson02.tasksresolve;
 
-import lesson02.utility.ConsoleInput;
+import utils.consolemanipulations.ConsoleInput;
 
 /*
 Task 5 (PrimeChecker)

@@ -5,6 +5,8 @@ package lesson01.loopspracticing;/*
 Для генерации случайного числа используйте метод Math.random().
 */
 
+import utils.arraysmanipulation.ArrayGenerator;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class MaxMinAverage {
                 + MaxMinAverage.getAverageArrayListValue(createdArrayList));
 */
 
-        int[] createdIntArray =  lesson01.arraysmanipulation.ArrayGenerator.generateRandomIntArray(20);    //create array and fill it by 10 random
+        int[] createdIntArray =  ArrayGenerator.generateRandomIntArray(20);    //create array and fill it by 10 random
         // int numbers from 0 to 10
         System.out.println("Max value of array " + Arrays.toString(createdIntArray) + " is: "
                 + MaxMinAverage.getMaxIntArrayValue(createdIntArray));

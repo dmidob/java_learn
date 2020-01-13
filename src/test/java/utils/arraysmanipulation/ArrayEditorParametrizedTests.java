@@ -1,6 +1,5 @@
-package lesson01.arraysmanipulation;
+package utils.arraysmanipulation;
 
-import lesson01.arraysmanipulation.ArrayEditor;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -8,7 +8,7 @@ void printRange(int first, int last)
 Тип результата - Вывод в консоль
  */
 
-import lesson02.utility.ConsoleInput;
+import utils.consolemanipulations.ConsoleInput;
 
 public class RangePrinter {
     private static final String MESSAGE_FOR_FIRST_NUMBER_INPUT = "Please input first number: ";
