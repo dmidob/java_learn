@@ -18,21 +18,21 @@ public class BlackJack {
     }
 
     public static int blackjackScore(int cardA, int cardB){
-        int winningResult = 0;
+        int winningScoreResult = 0;
         if (cardA > 21 && cardB > 21) {
-            return winningResult;
+            return winningScoreResult;
         }
         if (isCardsAreCorrect(cardA, cardB)){
             if (cardA <= 21 && cardB <= 21) {
-                winningResult = (Math.max(cardA, cardB));
+                winningScoreResult = (Math.max(cardA, cardB));
             }
             if (cardA > 21 || cardB > 21) {
-                winningResult = (Math.min(cardA, cardB));
+                winningScoreResult = (Math.min(cardA, cardB));
             }
         } else {
             ExceptionHandling.IllegalArgumentException(-1);
         }
-        return winningResult;
+        return winningScoreResult;
     }
 
     public static boolean isCardsAreCorrect (int cardA, int cardB){

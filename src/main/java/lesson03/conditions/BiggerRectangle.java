@@ -11,14 +11,14 @@ import utils.errorhandling.ExceptionHandling;
 
 public class BiggerRectangle {
     public static void main (String[] args) {
-        System.out.println(biggerRectange(110,20,30,40));
+        System.out.println(biggerRectangle(110,20,30,40));
     }
 
-    public static int biggerRectange(int widht1, int height1, int width2, int height2){
+    public static int biggerRectangle (int width1, int height1, int width2, int height2){
         int numberOfBiggerRectangle = 0;
-        int squareOfFirstRectangle = widht1 * height1;
+        int squareOfFirstRectangle = width1 * height1;
         int squareOfSecondRectangle = width2 * height2;
-        if (isRectangleDimensionsAreCorrect(widht1, height1, width2, height2)){
+        if (isRectangleDimensionsAreCorrect(width1, height1, width2, height2)){
             if (squareOfFirstRectangle > squareOfSecondRectangle){
                 numberOfBiggerRectangle = 1;
             }else {
