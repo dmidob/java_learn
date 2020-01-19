@@ -16,36 +16,34 @@ String bmiInfo(double weight, double height)
 Тип результата String
 */
 
-import utils.errorhandling.ExceptionHandling;
-
 public class BmiInfo {
     public static final String BMI_UNDERWEIGHT = "Underweight";
     public static final String BMI_NORMAL = "Normal";
     public static final String BMI_OVERWEIGHT = "Overweight";
+    public static final String ERROR_MESSAGE_WRONG_BIO_PARAMETERS_INPUT = "BIO parameters should be > 0";
 
     public static void main (String[] args) {
-        System.out.println(bmiInfo(-175, -1.80));
+        System.out.println(bmiInfo(81.4, 1.80));
     }
 
     public static String bmiInfo(double weight, double height){
         String bmiResultDescription = "";
-        if (isBioParametersCorrect(weight, height)){
-            double bmi = weight / Math.pow(height, 2);
-            if (bmi <= 18.5){
+        double bmiCalculated = bmiCalculate(weight, height);
+        if (bmiCalculated <= 18.5){
                 bmiResultDescription = BMI_NORMAL;
-            } else {
-                if (18.5 < bmi && bmi <= 25.0){
-                    bmiResultDescription = BMI_UNDERWEIGHT;
-                } else bmiResultDescription = BMI_OVERWEIGHT;
-            }
         } else {
-            ExceptionHandling.IllegalArgumentException(-1);
+            if (18.5 < bmiCalculated && bmiCalculated <= 25.0) {
+                bmiResultDescription = BMI_UNDERWEIGHT;
+            } else bmiResultDescription = BMI_OVERWEIGHT;
         }
         return bmiResultDescription;
     }
 
-    public static boolean isBioParametersCorrect(double weight, double height){
-        return weight > 0 && height > 0;
+    public static double bmiCalculate (double weight, double height){
+        if (weight <= 0 && height <= 0){
+            throw new IllegalArgumentException(ERROR_MESSAGE_WRONG_BIO_PARAMETERS_INPUT);
+        }
+        return weight / Math.pow(height, 2);
     }
 }
 

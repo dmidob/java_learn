@@ -7,31 +7,21 @@ int biggerRectange(int widht1, int height1, int width2, int height2)
 Тип результата int
 */
 
-import utils.errorhandling.ExceptionHandling;
-
 public class BiggerRectangle {
+    public static final String ERROR_MESSAGE_FOR_WRONG_DIMENSIONS_INPUT = "Rectangle dimension(s) should be > 0";
+
     public static void main (String[] args) {
-        System.out.println(biggerRectangle(110,20,30,40));
+        System.out.println(biggerRectangle(-110,-20,30,40));
     }
 
     public static int biggerRectangle (int width1, int height1, int width2, int height2){
-        int numberOfBiggerRectangle = 0;
-        int squareOfFirstRectangle = width1 * height1;
-        int squareOfSecondRectangle = width2 * height2;
-        if (isRectangleDimensionsAreCorrect(width1, height1, width2, height2)){
-            if (squareOfFirstRectangle > squareOfSecondRectangle){
-                numberOfBiggerRectangle = 1;
-            }else {
-                numberOfBiggerRectangle = 2;
-            }
-        } else {
-            ExceptionHandling.IllegalArgumentException(-1);
+        return calculaeRectangleSquare(width1, height1) > calculaeRectangleSquare(width2, height2) ? 1 : 2;
+    }
+
+    public static int calculaeRectangleSquare (int width, int height){
+        if (width < 0 || height < 0) {
+            throw new IllegalArgumentException(ERROR_MESSAGE_FOR_WRONG_DIMENSIONS_INPUT);
         }
-        return numberOfBiggerRectangle;
+        return width * height;
     }
-
-    public static boolean isRectangleDimensionsAreCorrect(int widht1, int height1, int width2, int height2){
-        return widht1 > 0 && height1 > 0 && width2 > 0 && height2 > 0;
-    }
-
 }

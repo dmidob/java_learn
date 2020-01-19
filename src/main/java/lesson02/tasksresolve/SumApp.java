@@ -19,15 +19,13 @@ public class SumApp {
     }
 
     public static int clientElemsSum (){
+        int inputNumber = 0;
         int sumOfInputNumbers = 0;
-        for (int i = 1; i > 0; i++) {
-            int inputNumber = ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_INPUT);
-            if (inputNumber != 0) {
-                sumOfInputNumbers += inputNumber;
-            } else {
-                break;
-            }
-        }
+        do {
+            inputNumber = ConsoleInput.inputNumberFromConsole(MESSAGE_FOR_INPUT);
+            sumOfInputNumbers +=inputNumber;
+        } while (inputNumber!=0);
         return sumOfInputNumbers;
+
     }
 }

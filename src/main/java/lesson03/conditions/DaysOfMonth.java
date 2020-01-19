@@ -9,9 +9,9 @@ int daysOfMonth(int month)
 Тип результата int
  */
 
-import utils.errorhandling.ExceptionHandling;
-
 public class DaysOfMonth {
+    public static final String ERROR_MESSAGE_WRONG_MONTH_INPUT = "Number of month should be between 1 and 12";
+
     public static void main (String[] args) {
         System.out.println(daysOfMonth(13));
     }
@@ -20,43 +20,25 @@ public class DaysOfMonth {
         int amountOfDays = 0;
         switch (month) {
             case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
                 amountOfDays = 31;
                 break;
             case 2:
                 amountOfDays = 28;
                 break;
-            case 3:
-                amountOfDays = 31;
-                break;
             case 4:
-                amountOfDays = 30;
-                break;
-            case 5:
-                amountOfDays = 31;
-                break;
             case 6:
-                amountOfDays = 30;
-                break;
-            case 7:
-                amountOfDays = 31;
-                break;
-            case 8:
-                amountOfDays = 31;
-                break;
             case 9:
-                amountOfDays = 30;
-                break;
-            case 10:
-                amountOfDays = 31;
-                break;
             case 11:
                 amountOfDays = 30;
                 break;
-            case 12:
-                amountOfDays = 31;
-                break;
             default:
-                ExceptionHandling.IllegalArgumentException(-1);
+                throw new IllegalArgumentException(ERROR_MESSAGE_WRONG_MONTH_INPUT);
         }
         return amountOfDays;
     }

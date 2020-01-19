@@ -9,21 +9,40 @@ boolean isLuckyTicket(int ticket)
 Тип результата boolean
 */
 
-import utils.errorhandling.ExceptionHandling;
-
 public class LuckyTicket {
+    public static final String ERROR_MESSAGE_FOR_WRONG_TICKET_NUMBER_INPUT = "Ticket number should be positive 6 digits number";
+
     public static void main (String[] args) {
-        System.out.println(isLuckyTicket(123321));
+        System.out.println(isLuckyTicket(157931));
     }
 
     public static boolean isLuckyTicket(int ticket){
-        int firstPartOfTicketNumber = ticket / 100000 + ticket % 100000 / 10000 + ticket % 10000 / 1000;
-        int secondPartOfTicketNumber = ticket % 1000 / 100 + ticket % 100 / 10 + ticket % 10;
-        if (!isTicketNumberCorrect(ticket)) {
-            ExceptionHandling.IllegalArgumentException(-1);
+        if (ticket > 999999 || ticket < 100000) {
+            throw new IllegalArgumentException(ERROR_MESSAGE_FOR_WRONG_TICKET_NUMBER_INPUT);
         }
-        return firstPartOfTicketNumber == secondPartOfTicketNumber;
+        return calculateSumOfFirstThreeDigits(ticket) == calculateSumOfSecondThreeDigits(ticket);
     }
+
+    public static int calculateSumOfFirstThreeDigits(int sixDigitsNumber){
+        return getIntAt(sixDigitsNumber, 1) + getIntAt(sixDigitsNumber, 2) + getIntAt(sixDigitsNumber, 3);
+    }
+
+    public static int calculateSumOfSecondThreeDigits(int sixDigitsNumber){
+        return getIntAt(sixDigitsNumber, 4) + getIntAt(sixDigitsNumber, 5) + getIntAt(sixDigitsNumber, 6);
+    }
+
+    private static int getIntAt (int number, int index){
+        return Integer.parseInt(Integer.toString(number).substring(index-1, index));
+    }
+
+
+
+
+
+
+
+
+
 
     public static boolean isTicketNumberCorrect(int ticket){
         return (100000 <= ticket && ticket <= 999999);

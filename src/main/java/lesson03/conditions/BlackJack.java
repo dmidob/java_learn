@@ -9,12 +9,10 @@ int blackjackScore(int cardA, int cardB)
 Тип результата int
  */
 
-import utils.errorhandling.ExceptionHandling;
-
 public class BlackJack {
+    public static final String ERROR_MESSAGE_WRONG_CARDS_INPUT = "Cards input should be > 0";
     public static void main (String[] args) {
         System.out.println(blackjackScore(-21,19));
-
     }
 
     public static int blackjackScore(int cardA, int cardB){
@@ -25,18 +23,17 @@ public class BlackJack {
         if (isCardsAreCorrect(cardA, cardB)){
             if (cardA <= 21 && cardB <= 21) {
                 winningScoreResult = (Math.max(cardA, cardB));
-            }
-            if (cardA > 21 || cardB > 21) {
+            } else {
                 winningScoreResult = (Math.min(cardA, cardB));
             }
         } else {
-            ExceptionHandling.IllegalArgumentException(-1);
+            throw new IllegalArgumentException(ERROR_MESSAGE_WRONG_CARDS_INPUT);
         }
         return winningScoreResult;
     }
 
     public static boolean isCardsAreCorrect (int cardA, int cardB){
-        return (cardA > 0 & cardB > 0);
+        return (cardA < 0 || cardB < 0);
     }
 
 }
