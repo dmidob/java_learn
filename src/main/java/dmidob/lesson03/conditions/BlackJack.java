@@ -20,7 +20,7 @@ public class BlackJack {
         if (cardA > 21 && cardB > 21) {
             return winningScoreResult;
         }
-        if (!isCardsAreCorrect(cardA, cardB)){
+        if (isCardsAreCorrect(cardA, cardB)){
             if (cardA <= 21 && cardB <= 21) {
                 winningScoreResult = (Math.max(cardA, cardB));
             } else {
@@ -33,7 +33,7 @@ public class BlackJack {
     }
 
     public static boolean isCardsAreCorrect (int cardA, int cardB){
-        return (cardA <= 0 || cardB <= 0);
+        return (cardA > 0 && cardB > 0);
     }
 
 }
